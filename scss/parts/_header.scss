@@ -1,0 +1,313 @@
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  left: 0;
+  @include box-sizing;
+  @include breakpoint((to: 960px)) {
+    position: relative;
+    #menu {
+      display: none;
+    }
+  }
+  @include breakpoint((to: 600px)) {
+    .logo {
+      float: none;
+      margin-left: 0;
+      text-align: center;
+    }
+    .menu-wrapper {
+      float: none;
+      text-align: center;
+      margin-bottom: 15px;
+      .button-openner {
+        margin-right: 0;
+      }
+    }
+  }
+}
+.menu-wrapper {
+  float: right;
+  margin-top: 15px;
+}
+.logo {
+  float: left;
+  margin-top: 25px;
+  margin-left: 40px;
+  img {
+    max-width: 100%;
+  }
+}
+
+.wrap {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 960px;
+  position: relative;
+}
+.link {
+  margin-top: 30px;
+  @include inline-block;
+  font-size: 16px;
+  color: $blue;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+  &:before {
+    position: absolute;
+    content: '';
+    right: -15px;
+    top: 10px;
+    display: block;
+    width: 10px;
+    height: 5px;
+    background: url(../images/arrow.png) no-repeat;
+  }
+}
+.intro {
+    max-width: 960px;
+    margin: auto;
+    padding: 10px;
+    @include box-sizing;
+  p {
+    margin-bottom: 30px;
+    font-size: 21px;
+  }
+  h2 {
+    font-size: 42px;
+    margin-bottom: 30px;
+    text-align: left;
+    font-weight: normal;
+  }
+  @include breakpoint((to: 600px)) {
+    h2 {
+      font-size: 30px;
+      text-align: center;
+      br {
+        display: none;
+      }
+    }
+    p {
+      font-size: 16px;
+    }
+  }
+  @include breakpoint((to: 400px)) {
+    h2 {
+      font-size: 25px;
+    }
+  }
+}
+
+.section {
+  text-align:center;
+  h1 {
+    b {
+      font-family: "Uni Sans Heavy";
+    }
+    font-family:"Uni Sans";
+    font-size: 35px;
+    font-weight: normal;
+    i {
+      font-size: 25px;
+      font-style: normal;
+      b {
+        text-decoration: underline;
+      }
+    }
+  }
+  @include breakpoint((to: 960px)) {
+    h1 {
+      font-size: 25px;
+    }
+  }
+}
+.button-openner {
+  @include inline-block(middle);
+  padding: 15px 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+  background: $blue;
+  border: 2px solid $blue;
+  @include box-sizing;
+  margin-right: 40px;
+  transition: .5s;
+  cursor: pointer;
+  &:hover {
+    background: #fff;
+    color: $blue;
+  }
+}
+#menu {
+  @include inline-block(middle);
+}
+#menu li {
+  display:inline-block;
+  margin-right: 50px;
+  color: #000;
+}
+#menu li.active{
+  text-decoration: underline;
+}
+#menu li a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+#menu li:hover{
+  text-decoration: underline;
+}
+#menu li a,
+#menu li.active a{
+  display:block;
+}
+
+
+#infoMenu {
+  height: 20px;
+  color: #f2f2f2;
+  position:fixed;
+  z-index:70;
+  bottom:0;
+  width:100%;
+  text-align:right;
+  font-size:0.9em;
+  padding:8px 0 8px 0;
+}
+#infoMenu ul {
+  padding: 0 40px;
+}
+#infoMenu li a {
+  display: block;
+  margin: 0 22px 0 0;
+  color: #333;
+}
+#infoMenu li a:hover {
+  text-decoration:underline;
+}
+#infoMenu li {
+  display:inline-block;
+  position:relative;
+}
+#examplesList{
+  display:none;
+  background: #282828;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  padding: 20px;
+  float: left;
+  position: absolute;
+  bottom: 29px;
+  right: 0;
+  width:638px;
+  text-align:left;
+}
+#examplesList ul{
+  padding:0;
+}
+#examplesList ul li{
+  display:block;
+  margin: 5px 0;
+}
+#examplesList ul li a{
+  color: #BDBDBD;
+  margin:0;
+}
+#examplesList ul li a:hover{
+  color: #f2f2f2;
+}
+#examplesList .column{
+  float: left;
+  margin: 0 20px 0 0;
+}
+#examplesList h3{
+  color: #f2f2f2;
+  font-size: 1.2em;
+  margin: 0 0 15px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1);
+  -moz-box-shadow: 0 1px 0 rgba(255,255,255,0.1);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1);
+  padding: 0 0 5px 0;
+}
+
+
+.button-openner-big {
+  padding: 20px 40px;
+  border: 2px solid $blue;
+  color: $blue;
+  @include inline-block;
+  text-transform: uppercase;
+  margin-top: 100px;
+  transition: .5s;
+  cursor: pointer;
+  &:hover {
+    background: $blue;
+    color: #fff;
+  }
+  @include breakpoint((to: 600px)) {
+    font-size: 14px;
+    margin-top: 30px;
+  }
+}
+.text-left {
+  text-align: left;
+  max-width: 960px;
+  margin: auto;
+}
+.list {
+  @include inline-block;
+  margin-right: 160px;
+  list-style-type: square;
+  list-style-position: inside;
+  color: #c6c6c6;
+  font-size: 21px;
+  &:last-child {
+    margin-right: 0;
+  }
+  li {
+    margin-bottom: 20px;
+    span {
+      color: #000;
+      b {
+        text-decoration: underline;
+        font-family: "Calibri", Arial;
+      }
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  @include breakpoint((to: 960px)) {
+    display: block;
+    margin-right: 0;
+    li {
+      margin-bottom: 0px;
+      font-size: 14px;
+    }
+  }
+}
+
+.image-box {
+  max-width: 1160px;
+  margin: 100px auto 0;
+  img {
+    max-width: 100%;
+  }
+  @include breakpoint((to: 600px)) {
+    margin: 30px auto 0;
+  }
+}
+.contact-data {
+  display: block;
+  font-size: 21px;
+  margin-bottom: 30px;
+  @include breakpoint((to: 600px)) {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+  <div id="modal1" class="modal_div">
+    <div class="modal-wrap">
+      <form class="form">
+        <span class="modal_close"></span>
+        <input type="text" placeholder="Укажите название Вашей компании" />
+        <input type="text" placeholder="Укажите Ваши контакты (e-mail + телефон)" />
+        <div class="file_upload">
+          <button type="button"></button>
+          <div>Прикрепите файл со счётом/заявкой</div>
+          <input type="file" />
+        </div>
+        <textarea placeholder="Ваши комментарии к заявке"></textarea>
+        <input type="submit" value="отправить заявку и получить наши цены" />
+      </form>
+    </div>
+  </div>
+  <div id="overlay"></div>
+  <header>
+    <div class="logo">
+      <img src="images/logo.png" alt="" />
+    </div>
+    <div class="menu-wrapper">
+      <ul id="menu">
+        <li data-menuanchor="firstPage" class="active">
+          <a href="#firstPage">О компании</a>
+        </li>
+        <li data-menuanchor="secondPage">
+          <a href="#secondPage">Наши услуги</a>
+        </li>
+        <li data-menuanchor="3rdPage">
+          <a href="#3rdPage">Контакты</a>
+        </li>
+      </ul>
+      <span class="button-openner open_modal" data-href="#modal1">Отправить заявку</span>
+    </div>
+  </header>
+  <div id="fullpage">
+    <div class="section" id="section0">
+      <h1>
+        Поставим вам <b>Стройматериалы, инструмент</b> <br />
+        <i>Пришлите счёт/заявку и просто <b>сравните!</b></i>
+      </h1>
+      <span class="button-openner-big open_modal" data-href="#modal1">отправить заявку и получить наши цены</span>
+    </div>
+    <div class="section" id="section1">
+      <div class="intro">
+        <div class="text-left">
+          <h2>Снабжаем компании материалами<br /> и инструментом</h2>
+          <p>Мы работаем с десятками строительных компаний не только в Минске и минской области, но и в других регионах Беларуси. Поставляем материалы и инструмент прямо на объекты, среди которых объекты общепита, банковские учреждения, бизнес-центры и др.</p>
+          <p>Сотрудничество с нами будет комфортным и выгодным для Вашей компании. Если у нас чего-то нет, то мы найдём и привезём это для Вас по лучшей цене.<br /><a href="" class="link open_modal" data-href="#modal1">Начните работать с нами</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="section" id="section2">
+      <div class="intro">
+        <div class="text-left">
+          <h2>Что мы можем Вам поставить?</h2>
+          <ul class="list">
+            <li><span>Гипсокартон</span></li>
+            <li><span>Инструмент</span></li>
+            <li><span>Керамическую плитку</span></li>
+            <li><span>Крепёж</span></li>
+            <li><span>Кровельные материалы</span></li>
+            <li><span>Лакокрасочные материалы</span></li>
+          </ul>
+          <ul class="list">
+            <li><span>Напольные покрытия</span></li>
+            <li><span>Подвесные потолки</span></li>
+            <li><span>Сухие строительные смеси</span></li>
+            <li><span>Утеплители</span></li>
+            <li><span>и <b>многое</b> другое</span></li>
+          </ul>
+          <div class="link-wrap">
+            <a href="" class="link open_modal" data-href="#modal1">Начните работать с нами</a>
+          </div>
+        </div>
+        <div class="image-box">
+          <img src="images/sprite.png" alt="" />
+        </div>
+      </div>
+    </div>
+    <div class="section" id="section3">
+      <div class="intro">
+        <div class="text-left">
+          <h2>Свяжитесь с нами и мы обсудим наше совместное сотрудничество</h2>
+          <span class="contact-data"><b>Наш офис:</b> г. Минск, ул. Тимирязева 67, офис 933</span>
+          <span class="contact-data"><b>Телефон:</b> +375 44 552-92-39</span>
+          <span class="contact-data"><b>Почта:</b> ip@proftm.by</span>
+          <a href="" class="link open_modal" data-href="#modal1">Начните работать с нами</a>
+        </div>
+      </div>
+    </div>
+  </div>
+<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="js/jquery.fullPage.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
