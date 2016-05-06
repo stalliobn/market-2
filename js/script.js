@@ -6,7 +6,7 @@
     $('#fullpage').fullpage({
       anchors: ['firstPage', 'secondPage', '3rdPage'],
       menu: '#menu',
-      loopTop: true,
+      // loopTop: true,
       navigation:true,
       // responsiveWidth: 960,
       responsiveHeight: 400,

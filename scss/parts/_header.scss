@@ -78,11 +78,24 @@ header {
     margin-bottom: 30px;
     text-align: left;
     font-weight: normal;
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      top: -40px;
+      left: 0;
+      height: 2px;
+      width: 100px;
+      background: #c6c6c6;
+    }
   }
   @include breakpoint((to: 600px)) {
     h2 {
       font-size: 30px;
       text-align: center;
+      &:before {
+        display: none;
+      }
       br {
         display: none;
       }
