@@ -4,7 +4,7 @@
 
   function init() {
     $('#fullpage').fullpage({
-      anchors: ['firstPage', 'secondPage', '2rdPage', '3rdPage'],
+      anchors: ['1', '2', '3', '4'],
       menu: '#menu',
       // loopTop: true,
       navigation:true,
